@@ -1,0 +1,256 @@
+/* Hero Section */
+.hero {
+  background: #f8f9fa;
+  text-align: left;
+}
+
+.chef-image {
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+/* Food Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #28a745;
+}
+
+/* Button Styling */
+.add-to-basket-btn {
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-to-basket-btn:hover {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+/* Button Clicked State */
+.add-to-basket-btn.clicked {
+  background-color: red;
+  color: white;
+  pointer-events: none; /* Disable the button after clicking */
+}
+
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Card Styles */
+.food-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 1rem;
+  color: #28a745;
+}
+
+/* Quantity Section */
+.quantity-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.quantity-section label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.quantity-input {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+
+
+
+/* Header Styles */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f8f9fa; /* Light background */
+  border-bottom: 2px solid #e9ecef;
+}
+
+.sticky-header .logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.sticky-header .nav {
+  display: flex;
+  gap: 20px; /* Space between navigation items */
+}
+
+.sticky-header .nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333; /* Default text color */
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sticky-header .nav-link:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Basket Button Styling */
+.basket-btn {
+  background-color: #ffc107; /* Yellow background */
+  color: black;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.basket-btn:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+  color: white;
+}
+
+/* Sticky Effect when Scrolling */
+.sticky-header {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for effect */
+}
+
+
+
+
+/* Success Notification */
+.success-popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 10px; /* Push it down from the very top */
+  left: 50%; /* Start at 50% of the viewport width */
+  transform: translateX(-50%); /* Center it horizontally */
+  background-color: #28a745; /* Green background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-weight: bold;
+  animation: fade-in-out 3s forwards;
+  text-align: center; /* Center the text */
+  max-width: 80%; /* Responsive max width */
+}
+
+
+/* Fade-in and Fade-out animation */
+@keyframes fade-in-out {
+  0% {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  10%, 90% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+}
+
+/* Basket Button Badge */
+.basket-count {
+  background-color: red;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+

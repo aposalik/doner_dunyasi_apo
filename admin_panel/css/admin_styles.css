@@ -1,0 +1,143 @@
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+/*DASHBOARD */
+
+/* General Page Styling */
+body {
+    background: linear-gradient(to right, #28a745, #28a745) !important;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+
+h1 {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Admin Boxes */
+.admin-box {
+    transition: all 0.3s ease-in-out;
+    border: none;
+    background: #fff;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.admin-box:hover .admin-icon {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.admin-box:hover h5 {
+    color: #28a745;
+}
+
+/* Admin Box Icon */
+.admin-icon {
+    font-size: 50px;
+    color: #28a745;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add glow effect */
+.admin-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.admin-box:hover::before {
+    opacity: 1;
+    animation: pulse 1.5s infinite;
+}
+
+/* Glow animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+/* Admin Sidebar */
+.sidebar {
+    background: #333;
+    color: #fff;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    color: #28a745;
+    text-decoration: underline;
+}
+
+/* Header */
+header.navbar {
+    background: #222;
+    color: #fff;
+}
+
+header .navbar-brand {
+    font-weight: bold;
+    color: #28a745;
+}
+
+header .navbar-nav .nav-link {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #28a745;
+}
+
